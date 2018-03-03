@@ -6,7 +6,7 @@ import bar.Bartender;
 import bar.Customer;
 import goodbyeworld.Kenny;
 import goodbyeworld.ThreadExceptionHandler;
-import varglobalaccess.DateFormatterExample;
+import nowsynchronized.SychronizedWay;
 
 public class MainClass {
 
@@ -86,7 +86,11 @@ public class MainClass {
 
 		// goodByeWorld();
 
-		new DateFormatterExample();
+		// new DateFormatterExample();
+
+		// new UnsychronizedWay();
+
+		new SychronizedWay();
 
 	}
 
