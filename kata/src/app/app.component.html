@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		{{pageTitle}}
+	</div>
+	<div class="panel-body">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Product list
+						</div>
+						<div class="panel-body">
+					
+							<div class='table-responsive'>
+								<table class="table" *ngIf='products && products.length'>
+									<thead>
+										<th>Image</th>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Add to cart</th>
+									</thead>
+									<tbody>
+				        					<tr *ngFor="let product of products">
+				           					<td>
+				           						<img [src]="product.imageUrl" [title]="product.productName"
+				               						[style.width.px]="imageWidth" [style.margin.px]="imageMargin">
+				             					</td>
+				             					<td>{{product.productName}}</td>
+				             					<td>{{product.price}}</td>
+				             					<td>
+				               					<button type="button" (click)="addProduct(product)" class="btn btn-success">ADD</button>
+				             					</td>
+				           				</tr>
+				           			</tbody>
+				           		</table>
+							</div>
+						</div>
+					</div>
+				</div>
+		 		<pm-cart class="col-lg-5"></pm-cart>
+	 		</div>
+	 	</div>
+ 	</div>
+ 	
+</div>
